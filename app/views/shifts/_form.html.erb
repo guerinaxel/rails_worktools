@@ -1,0 +1,32 @@
+<%= form_with model: @shift, local: true do |form| %>
+  <% if @shift.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@shift.errors.count, "Erreur") %> impossible d'enregistrer cet article</h2>
+    <ul>
+      <% @shift.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= form.label :shift_date %><br>
+    <%= form.date_field :shift_date %>
+  </p>
+  <p>
+    <%= form.label :shift_time_start %><br>
+    <%= form.time_select :shift_time_start %>
+  </p>
+  <p>
+    <%= form.label :shift_time_end %><br>
+    <%= form.time_select :shift_time_end %>
+  </p>
+  <p>
+    <%= form.label :shift_type %><br>
+    <%= form.text_area :shift_type %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to  "Liste shifts", shifts_path, {:class => 'btn btn-info'} %>

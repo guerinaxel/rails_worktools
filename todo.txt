@@ -1,0 +1,5 @@
+firebase_url    = 'https://fir-awesome-625cd.firebaseio.com/
+firebase_secret = '91N3KIyRNSo0uZXXgBciIvEPvnEUNjPzNN6qomKv'
+firebase = Firebase::Client.new(firebase_url, firebase_secret)
+
+response = firebase.push("todos", { :name => 'Pick the milk',        :priority => 1 })

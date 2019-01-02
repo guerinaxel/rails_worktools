@@ -1,0 +1,21 @@
+<h1>Shift <%= @shift.id %></h1>
+<div>
+  <p>
+    <%= label_tag(:shift_date) %><br>
+    <%= text_field_tag(:shift_date, @shift.shift_date, {disabled:true}) %>
+  </p>
+  <p>
+    <%= label_tag(:shift_time_start) %><br>
+    <%= text_field_tag(:shift_time_start, @shift.shift_time_start, {disabled:true}) %>
+  </p>
+  <p>
+    <%= label_tag(:shift_time_end) %><br>
+    <%= text_field_tag(:shift_time_end, @shift.shift_time_end, {disabled:true}) %>
+  </p>
+  <p>
+    <%= label_tag(:shift_type) %><br>
+    <%= text_field_tag(:shift_type, @shift.shift_type, {disabled:true}) %>
+  </p> 
+<div>
+<%= link_to  "Liste shifts", shifts_path, {:class => 'btn btn-info'} %> |
+<%= link_to 'Editer', edit_shift_path(@shift) %>

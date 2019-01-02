@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shift_date: 2018-12-27
+  shift_time_start: 2018-12-27 14:53:45
+  shift_time_end: 2018-12-27 14:53:45
+  shift_type: 1
+
+two:
+  shift_date: 2018-12-27
+  shift_time_start: 2018-12-27 14:53:45
+  shift_time_end: 2018-12-27 14:53:45
+  shift_type: 1
